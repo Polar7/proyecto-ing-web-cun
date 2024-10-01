@@ -1,13 +1,17 @@
 package com.ingweb.cun.infrastructure.persistance.jpa.entity;
 
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @Entity
 @Table(name = "marca_coche")
 @Getter
 @Setter
+@NoArgsConstructor
+@AllArgsConstructor
 public class BrandCarEntity {
 
     /**

@@ -8,7 +8,6 @@ import com.ingweb.cun.infrastructure.persistance.jpa.mapper.IBrandCarMapper;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Repository;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 

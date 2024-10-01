@@ -3,7 +3,6 @@ package com.ingweb.cun.infrastructure.persistance.jpa.mapper;
 import com.ingweb.cun.domain.model.BrandCar;
 import com.ingweb.cun.infrastructure.persistance.jpa.entity.BrandCarEntity;
 import org.mapstruct.Mapper;
-import org.mapstruct.Mapping;
 
 /**
  * Mapper para convertir Entities o Models de BrandCar
@@ -16,7 +15,6 @@ public interface IBrandCarMapper {
      * @param brandCar Objeto de dominio como fuente
      * @return Entity mappeado
      */
-    @Mapping(source = "idBrand", target = "idBrand")
     BrandCarEntity toBrandCarEntity(BrandCar brandCar);
 
     /**
