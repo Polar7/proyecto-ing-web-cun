@@ -5,6 +5,7 @@ import com.ingweb.cun.application.dto.BrandCarDtoResponse;
 import com.ingweb.cun.domain.model.BrandCar;
 import com.ingweb.cun.domain.usecase.IBrandCarServicePort;
 import com.ingweb.cun.infrastructure.util.StatusCodeResponse;
+import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.AutoConfigurationPackage;
@@ -32,7 +33,7 @@ public class BrandCarController {
     }
 
     @PostMapping
-    public ResponseEntity<BrandCarDtoResponse> saveBrandCarDto(@RequestBody BrandCarDtoRequest brandCarDtoRequest) {
+    public ResponseEntity<BrandCarDtoResponse> saveBrandCarDto(@Valid @RequestBody BrandCarDtoRequest brandCarDtoRequest) {
         return ResponseEntity
                 .status(HttpStatus.CREATED)
                 .body(brandCarService.saveBrandCar(brandCarDtoRequest));

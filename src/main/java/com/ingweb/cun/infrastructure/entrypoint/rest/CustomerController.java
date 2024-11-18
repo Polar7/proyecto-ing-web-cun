@@ -6,6 +6,7 @@ import com.ingweb.cun.application.dto.CustomerDtoResponse;
 import com.ingweb.cun.domain.model.BrandCar;
 import com.ingweb.cun.domain.model.Customer;
 import com.ingweb.cun.domain.usecase.ICustomerServicePort;
+import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -36,7 +37,7 @@ public class CustomerController {
     }
 
     @PostMapping
-    public ResponseEntity<CustomerDtoResponse> saveBrandCarDto(@RequestBody Customer brandCarDtoRequest) {
+    public ResponseEntity<CustomerDtoResponse> saveBrandCarDto(@Valid @RequestBody Customer brandCarDtoRequest) {
         return ResponseEntity
                 .status(HttpStatus.CREATED)
                 .body(customerService.saveCustomer(brandCarDtoRequest));

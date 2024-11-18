@@ -1,5 +1,6 @@
 package com.ingweb.cun.application.dto;
 
+import jakarta.validation.constraints.NotEmpty;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -17,5 +18,6 @@ public class BrandCarDtoRequest {
     /**
      * Descripcion de la MarcaCoche
      */
+    @NotEmpty(message = "La descripcion no puede ser vacia")
     private String descriptionBrand;
 }
